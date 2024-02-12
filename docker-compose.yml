@@ -1,0 +1,14 @@
+version: "3.0"
+
+services:
+  api:
+    container_name: "api"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./app:/home/user
+    ports:
+      - 8080:8080
